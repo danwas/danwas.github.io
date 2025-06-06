@@ -1,13 +1,13 @@
 /* CSS Variables for consistent theming */
 :root {
-    --primary-text: rgb(160, 160, 160);
-    --secondary-text: rgb(158, 158, 158);
+    --primary-text: rgb(0, 0, 0);
+    --secondary-text: rgb(0, 0, 0);
     --dark-bg: rgb(26, 26, 26);
     --light-bg: rgb(255, 255, 255);
     --accent-blue: rgb(113, 175, 233);
     --white-text: rgb(236, 236, 236);
     --grey-text: rgb(214, 214, 214);
-    --dark-text: rgb(37, 37, 37);
+    --dark-text: rgb(0, 0, 0);
     
     --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
                    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -26,7 +26,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
-    color: #333;
+    color: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -47,7 +47,7 @@ p {
 
 code {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: 10px;
 }
 
 a {
@@ -75,7 +75,7 @@ a:focus {
 select.form-control,
 textarea.form-control,
 input.form-control {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Utility classes */
@@ -84,7 +84,7 @@ input.form-control {
 }
 
 /* Color utilities */
-.text-black { color: rgb(19, 19, 19); }
+.text-black { color: rgb(0, 0, 0); }
 .text-grey { color: var(--grey-text); }
 .text-white { color: var(--white-text); }
 .text-blue { color: var(--accent-blue); }
@@ -97,8 +97,8 @@ input.form-control {
 .cv img {
     display: block;
     margin: auto;
-    max-width: 35%;
-    max-height: 35%;
+    max-width: 17.5%;
+    max-height: 17.5%;
     border-radius: 50%;
 }
 
@@ -107,6 +107,9 @@ input.form-control {
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
 }
 
 .work::-webkit-scrollbar {
@@ -117,6 +120,8 @@ input.form-control {
     padding: 1%;
     position: relative;
     max-height: 40vh;
+    flex: 0 0 calc(50% - 0.5%);
+    box-sizing: border-box;
 }
 
 .item img {
@@ -155,7 +160,7 @@ input.form-control {
 /* Mobile styles */
 @media (max-width: 1024px) {
     body {
-        font-size: 12px;
+        font-size: 10px;
     }
     
     .cv {
@@ -163,20 +168,26 @@ input.form-control {
     }
     
     .cv h1 {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .cv h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .cv h3 {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .work {
         width: 75vw;
         padding-top: 1%;
+        flex-direction: column;
+    }
+    
+    .item {
+        flex: none;
+        width: 100%;
     }
     
     .item img {
@@ -187,7 +198,7 @@ input.form-control {
 /* Desktop styles */
 @media (min-width: 1025px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     #main {
@@ -196,16 +207,18 @@ input.form-control {
     }
     
     #first {
-        width: 25vw;
+        width: 22.5vw;
         float: left;
         position: fixed;
         height: 100%;
         left: 0;
         top: 0;
+        overflow-y: auto;
+        scrollbar-width: thin;
     }
     
     #second {
-        width: 75vw;
+        width: 77.5vw;
         float: right;
         background-color: var(--dark-bg);
         overflow: hidden;
@@ -217,35 +230,41 @@ input.form-control {
     }
     
     .cv h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .cv h2 {
-        font-size: 18px;
-    }
-    
-    .cv h3 {
         font-size: 16px;
     }
     
-    .cv p {
+    .cv h3 {
         font-size: 14px;
     }
     
+    .cv p {
+        font-size: 12px;
+    }
+    
     .cv img {
-        max-width: 70%;
-        max-height: 70%;
+        max-width: 35%;
+        max-height: 35%;
     }
     
     .work {
         height: 100vh;
-        width: 75vw;
+        width: 77.5vw;
         padding: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1%;
+        align-content: flex-start;
     }
     
     .item {
         max-height: 50vh;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
+        flex: 0 0 calc(50% - 0.5%);
+        box-sizing: border-box;
     }
     
     .item img {
