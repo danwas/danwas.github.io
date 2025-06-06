@@ -1,0 +1,275 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-text: rgb(160, 160, 160);
+    --secondary-text: rgb(158, 158, 158);
+    --dark-bg: rgb(26, 26, 26);
+    --light-bg: rgb(255, 255, 255);
+    --accent-blue: rgb(113, 175, 233);
+    --white-text: rgb(236, 236, 236);
+    --grey-text: rgb(214, 214, 214);
+    --dark-text: rgb(37, 37, 37);
+    
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                   sans-serif, 'Open Sans';
+    --font-heading: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-bg);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-text);
+    margin: 0.5em 0;
+}
+
+p {
+    font-family: var(--font-heading);
+    color: var(--secondary-text);
+    font-size: small;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+code {
+    font-family: var(--font-code);
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    min-height: 44px; /* Better touch targets */
+    display: inline-block;
+}
+
+a:hover,
+a:focus {
+    opacity: 0.8;
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Focus styles for keyboard navigation */
+*:focus {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Form elements */
+select.form-control,
+textarea.form-control,
+input.form-control {
+    font-size: 16px;
+}
+
+/* Utility classes */
+.center {
+    text-align: center;
+}
+
+/* Color utilities */
+.text-black { color: rgb(19, 19, 19); }
+.text-grey { color: var(--grey-text); }
+.text-white { color: var(--white-text); }
+.text-blue { color: var(--accent-blue); }
+
+/* Component styles */
+.cv {
+    padding: 2vw;
+}
+
+.cv img {
+    display: block;
+    margin: auto;
+    max-width: 35%;
+    max-height: 35%;
+    border-radius: 50%;
+}
+
+.work {
+    background: var(--dark-bg);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.work::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    padding: 1%;
+    position: relative;
+    max-height: 40vh;
+}
+
+.item img {
+    display: block;
+    margin: auto;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.item:hover img {
+    filter: brightness(100%);
+}
+
+.item p {
+    color: var(--dark-text);
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2vw;
+    font-size: large;
+    font-weight: 900;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+}
+
+.item .item-subtitle {
+    color: rgb(184, 184, 184);
+    font-size: small;
+    display: block;
+}
+
+.item #dark {
+    filter: brightness(70%);
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+    body {
+        font-size: 12px;
+    }
+    
+    .cv {
+        width: 90vw;
+    }
+    
+    .cv h1 {
+        font-size: 16px;
+    }
+    
+    .cv h2 {
+        font-size: 16px;
+    }
+    
+    .cv h3 {
+        font-size: 14px;
+    }
+    
+    .work {
+        width: 75vw;
+        padding-top: 1%;
+    }
+    
+    .item img {
+        max-width: 96vw;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px;
+    }
+    
+    #main {
+        width: 100vw;
+        margin: auto;
+    }
+    
+    #first {
+        width: 25vw;
+        float: left;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    #second {
+        width: 75vw;
+        float: right;
+        background-color: var(--dark-bg);
+        overflow: hidden;
+    }
+    
+    .cv {
+        width: 97%;
+        padding-left: 1vw;
+    }
+    
+    .cv h1 {
+        font-size: 24px;
+    }
+    
+    .cv h2 {
+        font-size: 18px;
+    }
+    
+    .cv h3 {
+        font-size: 16px;
+    }
+    
+    .cv p {
+        font-size: 14px;
+    }
+    
+    .cv img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+    
+    .work {
+        height: 100vh;
+        width: 75vw;
+        padding: 2%;
+    }
+    
+    .item {
+        max-height: 50vh;
+        margin-bottom: 2%;
+    }
+    
+    .item img {
+        max-width: 100%;
+        max-height: 40vh;
+        object-fit: cover;
+    }
+    
+    .item #dark {
+        filter: brightness(60%);
+    }
+    
+    .item p {
+        font-size: x-large;
+        padding: 3%;
+    }
+    
+         .item .item-subtitle {
+         font-size: medium;
+     }
+}
+
+/* @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.  }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops }
+@media (min-width:1281px) { /* hi-res laptops and desktops  } 
+*/

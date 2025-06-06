@@ -1,0 +1,191 @@
+
+html {
+    height: 100%;
+    background-color: white;
+}
+
+:root {
+    --site_width: 1400px;
+}
+
+body {
+    font-size: 100%;
+    font-family: "din-regular";
+    color: #393836;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 60px;
+    align-items: left;
+    color: black;
+    background-color: aliceblue;
+}
+
+header {
+    font-size: 80px;
+    color: aliceblue;
+    line-height: 82px;
+    font-weight: lighter;
+}
+
+h2 { 
+    font-family: "Brush Script MT", cursive; 
+    font-size: 48px; font-style: normal; 
+    font-variant: normal; font-weight: 10; line-height: 50px; 
+}
+
+p { font-family: inherit; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; }
+
+small {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+    object-fit: cover;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    display: block; /* remove extra space below image */
+    object-fit: cover;
+}
+
+.parallax {
+    margin-top: 0px;
+    /* The image used */
+    background-image: url("DSC_0046.jpg");
+    /* Set a specific height */
+    height: 700px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+#smallimg {
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+    border-radius: 15px 0px 15px 0px;
+}
+
+#container {
+    position: relative;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+#text-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5px;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: aliceblue;
+    color: black;
+}
+
+#footer {
+    bottom: 0;
+    margin-top: 450px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+}
+
+#copyright {
+    bottom: 0;
+    margin-top: auto;
+    font-size: small;
+}
+
+#text {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+#first {
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 300px;
+    overflow: hidden;
+}
+#second {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 300px;
+    overflow: hidden;
+}
+#third {
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 300px;
+    width: 30%;
+    overflow: hidden;
+}
+#t1 {
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 100px;
+}
+#o1 {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 100px;
+}
+#tennis1 {
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    height: 100px;
+    width: 30%;
+}
+
+#parallaxtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    vertical-align: middle;
+    color: aliceblue;
+    margin-top: 5%;
+}
+
+

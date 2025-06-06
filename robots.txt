@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /files/*.pdf
+Disallow: /*.DS_Store
+
+Sitemap: https://danielwass.com/sitemap.xml 
