@@ -3,9 +3,9 @@
     --primary-text: rgb(0, 0, 0);
     --secondary-text: rgb(0, 0, 0);
     --dark-bg: rgb(26, 26, 26);
-    --light-bg: rgb(255, 255, 255);
+    --light-bg: rgb(236, 236, 236);
     --accent-blue: rgb(113, 175, 233);
-    --white-text: rgb(236, 236, 236);
+    --white-text: rgb(222, 222, 222);
     --grey-text: rgb(214, 214, 214);
     --dark-text: rgb(0, 0, 0);
     
@@ -34,7 +34,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--primary-text);
-    margin: 0.5em 0;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 14px;
 }
 
 p {
@@ -42,7 +46,6 @@ p {
     color: var(--secondary-text);
     font-size: small;
     font-weight: 600;
-    line-height: 1.4;
 }
 
 code {
@@ -54,7 +57,6 @@ a {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s ease;
-    min-height: 44px; /* Better touch targets */
     display: inline-block;
 }
 
@@ -96,10 +98,14 @@ input.form-control {
 
 .cv img {
     display: block;
-    margin: auto;
+    margin: 0;
     max-width: 17.5%;
     max-height: 17.5%;
     border-radius: 50%;
+}
+
+section.experience {
+    padding-top: 12px;
 }
 
 .work {
@@ -122,6 +128,7 @@ input.form-control {
     max-height: 40vh;
     flex: 0 0 calc(50% - 0.5%);
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .item img {
@@ -131,10 +138,6 @@ input.form-control {
     object-fit: cover;
     filter: brightness(90%);
     transition: filter 0.3s ease;
-}
-
-.item:hover img {
-    filter: brightness(100%);
 }
 
 .item p {
@@ -207,7 +210,7 @@ input.form-control {
     
     #main {
         width: 100vw;
-        margin: auto;
+        /* margin: auto; */
     }
     
     #first {
@@ -249,7 +252,9 @@ input.form-control {
         font-size: 12px;
     }
     
+    /* center this image in the middle of the page */
     .cv img {
+        margin: auto;
         max-width: 35%;
         max-height: 35%;
     }
